@@ -1,10 +1,12 @@
 package com.example.start.domain;
 
 import com.example.start.domain.enums.EstadoPagamento;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 import javax.persistence.Entity;
 
 @Entity
+@JsonTypeName("pagamentoComCartao")
 public class PagamentoComCartao extends Pagamento {
     private static final long serialVersionUID = 1L;
 
@@ -25,4 +27,7 @@ public class PagamentoComCartao extends Pagamento {
     public void setNumeroDeParcelas(Integer numeroDeParcelas) {
         this.numeroDeParcelas = numeroDeParcelas;
     }
+
+
+
 }
